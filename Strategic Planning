@@ -1,0 +1,50 @@
+### Materials List
+
+1. **Microcontroller**:
+   - Raspberry Pi Pico
+
+2. **Actuators**:
+   - Servo motors (suitable for pressing strings)
+
+3. **Power Supply**:
+   - USB power supply or battery pack
+
+4. **Sensors/Inputs**:
+   - Push buttons (one for each chord or a rotary encoder for multiple chords)
+   - Optional: Resistors (for button pull-down or pull-up configuration)
+
+5. **Mechanical Components**:
+   - 3D printed parts or other materials for the pressing mechanism
+   - Connecting rods or linkages
+
+6. **Mounting Hardware**:
+   - Screws, nuts, bolts, and brackets
+
+7. **Wiring**:
+   - Jumper wires for connections
+   - Breadboard for prototyping (if needed)
+
+8. **Software Tools**:
+   - Thonny IDE (for coding in Python)
+   - Libraries for servo control (e.g., `machine` and `utime`)
+
+9. **Optional**:
+   - LED indicators to show which chord is currently selected
+
+### Suggested Approach
+
+1. **Button Setup**:
+   - Connect buttons to GPIO pins on the Pico. Use pull-down or pull-up resistors to ensure stable readings.
+   - Each button can correspond to a different chord or action.
+
+2. **Servo Control**:
+   - Write code to control the servos based on button presses. You might have a function that moves the servo to the correct position for each chord.
+
+3. **User Interface**:
+   - If you use multiple buttons, consider adding LEDs to indicate which chord is currently selected.
+
+4. **Testing**:
+   - Start by testing individual components (like the servos and buttons) to ensure they work before integrating everything.
+
+5. **Final Assembly**:
+   - Once everything is working, assemble it into a compact design that fits well with the guitar.
