@@ -1,0 +1,69 @@
+### Step 1: Define Chord Positions
+
+First, you’ll need to determine the exact positions (angles) for the servos to press each chord. Here’s a rough idea:
+
+- **G Chord**: Press down the 2nd fret on the A (5th) string, 3rd fret on the low E (6th) string, and 3rd fret on the high E (1st) string.
+- **C Chord**: Press down the 1st fret on the B (2nd) string, 1st fret on the high E (1st) string, and 3rd fret on the A (5th) string.
+- **D Chord**: Press down the 2nd fret on the G (3rd) string, 2nd fret on the high E (1st) string, and 3rd fret on the B (2nd) string.
+- **Em Chord**: Press down the 2nd fret on the A (5th) string and the D (4th) string.
+
+### Step 2: Adjust Your Code
+
+Update your code to include the different chord positions. Here’s a sample structure:
+
+```python
+from machine import Pin, PWM
+import time
+
+# Set up servos
+servo_g = PWM(Pin(0))  # G chord servo
+servo_c = PWM(Pin(1))  # C chord servo
+servo_d = PWM(Pin(2))  # D chord servo
+servo_em = PWM(Pin(3))  # Em chord servo
+
+# Set frequency for servos
+for servo in [servo_g, servo_c, servo_d, servo_em]:
+    servo.freq(50)
+
+# Function to move servo to specific angle
+def move_servo(servo, angle):
+    duty = int((angle / 180 * 102) + 26)  # Convert angle to duty cycle
+    servo.duty(duty)
+
+# Set up buttons
+button_g = Pin(4, Pin.IN, Pin.PULL_UP)  # Button for G chord
+button_c = Pin(5, Pin.IN, Pin.PULL_UP)  # Button for C chord
+button_d = Pin(6, Pin.IN, Pin.PULL_UP)  # Button for D chord
+button_em = Pin(7, Pin.IN, Pin.PULL_UP)  # Button for Em chord
+
+# Main loop
+while True:
+    if not button_g.value():  # G button pressed
+        move_servo(servo_g, 0)  # Move to G chord position
+        time.sleep(0.5)  # Debounce delay
+    elif not button_c.value():  # C button pressed
+        move_servo(servo_c, 0)  # Move to C chord position
+        time.sleep(0.5)
+    elif not button_d.value():  # D button pressed
+        move_servo(servo_d, 0)  # Move to D chord position
+        time.sleep(0.5)
+    elif not button_em.value():  # Em button pressed
+        move_servo(servo_em, 0)  # Move to Em chord position
+        time.sleep(0.5)
+```
+
+### Step 3: Determine Servo Positions
+
+You will need to figure out the angles for each chord based on your mechanism design. Here’s how you can do that:
+
+1. **Initial Setup**: Start with the servos in their resting positions (not pressing any strings).
+2. **Trial and Error**: Gradually move each servo to press the corresponding strings for each chord while observing the results on your guitar. Adjust the angles in the code accordingly.
+3. **Final Positions**: Once you find the right positions, replace the angles in the `move_servo()` function calls.
+
+### Step 4: Test Each Chord
+
+Run the updated code and press each button to test if the corresponding chord plays correctly. Adjust timings and angles as needed until it works smoothly.
+
+### Step 5: Finalize Your Design
+
+After testing, finalize your design by securing all components, making sure the mechanism operates smoothly without interfering with the guitar.
