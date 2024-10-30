@@ -31,14 +31,14 @@
 9. **Optional**:
    - LED indicators to show which chord is currently selected
 
-### Suggested Approach
+###Start-Up Plan
 
 1. **Button Setup**:
    - Connect buttons to GPIO pins on the Pico. Use pull-down or pull-up resistors to ensure stable readings.
    - Each button can correspond to a different chord or action.
 
 2. **Servo Control**:
-   - Write code to control the servos based on button presses. You might have a function that moves the servo to the correct position for each chord.
+   - Write code to control the servos based on button presses. 
 
 3. **User Interface**:
    - If you use multiple buttons, consider adding LEDs to indicate which chord is currently selected.
