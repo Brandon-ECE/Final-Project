@@ -1,2 +1,2 @@
 # Final-Project
-Robotic guitar chord player
+Robotic Guitar Chord Assistance`
