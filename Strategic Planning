@@ -1,40 +1,15 @@
-### Materials List
+Matterials List 
+- Raspberry Pi Pico
+- 3 Servo motors
+- 3 Joysticks
+- 3D Printed Parts 
+- Mounting Hardware
+- Jumper Wires
+- Thonny Coding (Python)
 
-1. **Microcontroller**:
-   - Raspberry Pi Pico
-
-2. **Actuators**:
-   - Servo motors (suitable for pressing strings)
-
-3. **Power Supply**:
-   - USB power supply or battery pack
-
-4. **Sensors/Inputs**:
-   - Push buttons (one for each chord or a rotary encoder for multiple chords)
-   - Optional: Resistors (for button pull-down or pull-up configuration)
-
-5. **Mechanical Components**:
-   - 3D printed parts or other materials for the pressing mechanism
-   - Connecting rods or linkages
-
-6. **Mounting Hardware**:
-   - Screws, nuts, bolts, and brackets
-
-7. **Wiring**:
-   - Jumper wires for connections
-   - Breadboard for prototyping (if needed)
-
-8. **Software Tools**:
-   - Thonny IDE (for coding in Python)
-   - Libraries for servo control (e.g., `machine` and `utime`)
-
-9. **Optional**:
-   - LED indicators to show which chord is currently selected
-
-###Start-Up Plan
-
-1. **Button Setup**:
-   - Connect buttons to GPIO pins on the Pico. Use pull-down or pull-up resistors to ensure stable readings.
+Start Up Plan
+-Joystick Setup
+   - Connect joysticks to GPIO pins on the Pico. Use pull-down or pull-up resistors to ensure stable readings.
    - Each button can correspond to a different chord or action.
 
 2. **Servo Control**:
