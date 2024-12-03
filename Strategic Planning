@@ -8,18 +8,14 @@ Matterials List
 - Thonny Coding (Python)
 
 Start Up Plan
--Joystick Setup
-   - Connect joysticks to GPIO pins on the Pico. Use pull-down or pull-up resistors to ensure stable readings.
-   - Each button can correspond to a different chord or action.
+-Joystick Setup:
+Connect joysticks to GPIO pins on the Pico.Each joysticks can correspond to a different chord or action.
 
-2. **Servo Control**:
-   - Write code to control the servos based on button presses. 
+-Servo Control:
+Writen code to control the servos based on joysticks angle of motion.
 
-3. **User Interface**:
-   - If you use multiple buttons, consider adding LEDs to indicate which chord is currently selected.
+-Testing:
+Start by testing individual components (like the servos and joysticks) to ensure they work before integrating everything.
 
-4. **Testing**:
-   - Start by testing individual components (like the servos and buttons) to ensure they work before integrating everything.
-
-5. **Final Assembly**:
-   - Once everything is working, assemble it into a compact design that fits well with the guitar.
+Final Assembly:
+Once everything is working, assemble it into a compact design that fits well with the guitar.
